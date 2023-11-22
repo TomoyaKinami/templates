@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/color/jquery.color-2.2.0.min.js"
+      integrity="sha256-aSe2ZC5QeunlL/w/7PsVKmV+fa0eDbmybn/ptsKHR6I="
+      crossorigin="anonymous"
+    ></script>
+    <!-- ここまでは消さないで -->
+    <!-- タイトルは1582のところをアプリ名にしてね-->
+    <title>デジタル部log-1582</title>
+    <link href="/template.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body style="font-family: メイリオ, Hiragino Sans">
+    <div
+      style="
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 15%;
+        border: none;
+        border-bottom: 4px dashed #ffff;
+        width: 100%;
+        background-color: #8bc6ec;
+        background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+      "
+    >
+      <a href="/"
+        ><img
+          src="/digital2.png"
+          style="height: 15vh; display: inline-block; vertical-align: middle"
+        />
+
+        <h1
+          style="color: azure; display: inline-block; vertical-align: middle"
+          id="head_title"
+        >
+          デジタル部log
+        </h1></a
+      >
+    </div>
+    <div
+      style="position: absolute; left: 0px; right: 0px; top: 15%; width: 100%"
+    >
+      <div id="introduction" style="margin-left: 30px; margin-right: 30px">
+        <div style="display: flex; justify-content: center">
+          <h2
+            style="
+              color: black;
+              border: none;
+              border-bottom: 4px dashed #0c0c0c;
+              padding-top: 10px;
+            "
+          >
+            1582とは?<!-- ここもアプリ名でよろしく -->
+          </h2>
+        </div>
+        <p style="color: black; text-align: center">
+          <!-- ここもいい感じに変えてもらえると -->
+          デジタル部員木南らによって作られたwebアプリ「1582」について、アプリの機能、開発にまつわる裏話などなど、紹介させてください。(執筆:キナミ)
+        </p>
+      </div>
+      <!-- ここからは割と自由に編集してもらえると嬉しい -->
+      <!-- 見出しも自由にアプリに合わせて決めて下さい -->
+      <div>
+        <div
+          style="
+            position: relative;
+            left: 0px;
+            height: 12vh;
+            width: 100%;
+            background-color: #8bc6ec;
+            background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+            border: none;
+            border-bottom: 4px dashed #ffff;
+            display: table;
+          "
+        >
+          <h2
+            style="
+              color: azure;
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              margin: 0 auto;
+            "
+          >
+            開発の経緯
+          </h2>
+        </div>
+        <!-- このgridはいい感じに設定してほしい。レスポンシブデザインに命かけてる。-->
+        <!-- あとは、基本的な見出しのレイアウトと、このアプリを早速使うのふわふわ浮いてるやつ、を残してくれると嬉しい。あと、左右にmargin30pxを空けてほしい。それ以外はゆるくお願いします。-->
+        <!-- class名 gridはレスポンシブデザイン用で、cssの方で決めてある。 https://www.webcreatorbox.com/tech/css-grid-basic-layout をそのまま使って書いたので、これを詳しくは見てもらえると、-->
+        <div class="grid" style="margin-left: 30px; margin-right: 30px">
+          <div><img src="/1582_manga.png" width="100%" /></div>
+          <div>
+            <div style="display: flex; justify-content: left">
+              <h3
+                style="
+                  color: black;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                  padding-top: 10px;
+                "
+              >
+                授業でこんな経験ありませんか?
+              </h3>
+            </div>
+            <p>先生:授業で誰も発言せず、授業が進まない...</p>
+            <p>生徒:気まずくて、発言したいけど、しづらい...</p>
+            <h3>
+              &#8658;生徒が先生の質問に反応でき、
+              先生も生徒の反応を見ることが出来るサービスを作ろう!!!
+            </h3>
+            <p>
+              またIDMでは、出席コードだけ入れて、授業に出席しない(通称ピ逃げ)が相次いでいた。
+            </p>
+            <h3>
+              &#8658;そこで、ちゃんと授業を受けているか確認できるようにもしよう!!!
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          style="
+            position: relative;
+            left: 0px;
+            height: 12vh;
+            width: 100%;
+            background-color: #8bc6ec;
+            background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+            border: none;
+            border-bottom: 4px dashed #ffff;
+            display: table;
+          "
+        >
+          <h2
+            style="
+              color: azure;
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              margin: 0 auto;
+            "
+          >
+            使い方
+          </h2>
+        </div>
+
+        <h3
+          style="
+            margin-left: 30px;
+            margin-right: 30px;
+            color: black;
+            padding-top: 10px;
+            text-align: center;
+            margin-bottom: 0px;
+          "
+        >
+          <u>このアプリは最低でも、生徒・先生2人分の操作が必要です。</u>
+        </h3>
+        <h3
+          style="
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 0px;
+            color: black;
+            border: none;
+            border-bottom: 4px dashed #0c0c0c;
+            text-align: center;
+          "
+        >
+          <u
+            >皆さんがぜひ試してみるときは、2つのブラウザーを用意する、お友達とやるなど、お願いします。</u
+          >
+        </h3>
+        <div style="margin-bottom: 30px">
+          <div class="grid2" style="margin-left: 30px; margin-right: 30px">
+            <div><img src="/1582_login.jpg" width="100%" /></div>
+            <div>
+              <h3
+                style="
+                  color: black;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                "
+              >
+                <u>①まずはログインページにアクセスしよう!!!</u>
+              </h3>
+              <p>
+                　本アプリには<strong>アカウントの新規登録機能はない。</strong>このアプリは学校の事務科がアカウントの管理をすることを想定しており、履修した授業の登録等も事務科が行うために、生徒は登録できないようになっている。
+              </p>
+              <p>
+                　そこでデジタル部Log公開デモ用のために、ユーザーIDとpasswordは<strong>ゲスト用のアカウント</strong>を用意した。こちらをご利用下さい。
+              </p>
+              <p>
+                生徒用ID : 0000001 - 0000178<br />
+                (178人分用意)
+              </p>
+              <p>先生用ID : teacher(1人分用意)</p>
+              <p>password : 12345678(全て共通)</p>
+            </div>
+            <div><img src="/1582_home.jpg" width="100%" /></div>
+            <div>
+              <h3
+                style="
+                  color: black;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                "
+              >
+                <u>②ホーム画面で参加する授業を選択しよう!!!</u>
+              </h3>
+              <p>
+                　このアプリには授業ごとに部屋が用意されている。生徒も先生も参加する授業をホーム画面で選択しよう!
+              </p>
+              <p>
+                　今回はデジタル部Log公開デモ用のため、生徒も先生も履修や担当にかかわらず、用意したすべての授業に参加できるようになっている。実際に運用するときは、担当教員や履修に合わせて、先生と生徒それぞれごとに、表示される授業は違う予定。
+              </p>
+              <p>
+                ちなみに今回デモ用に用意した授業はIDM2年生後期で実際に行われる授業を用意した。
+              </p>
+              <p><strong>③以降は先生と生徒で表示が変わるぞ。</strong></p>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <input id="all" type="radio" name="tab_item" checked />
+            <label class="tab_item1" for="all">生徒側の操作</label>
+            <input id="programming" type="radio" name="tab_item" />
+            <label class="tab_item2" for="programming">先生側の操作</label>
+            <div class="tab_content" id="all_content">
+              <div class="grid2" style="margin-left: 10px; margin-right: 10px">
+                <div><img src="/1582_student.jpg" width="100%" /></div>
+                <div>
+                  <h3
+                    style="
+                      color: black;
+                      border: none;
+                      border-bottom: 4px dashed #0c0c0c;
+                    "
+                  >
+                    <u>③生徒は授業の理解度について選択しよう!!!</u>
+                  </h3>
+                  <p>
+                    　このアプリでは、生徒の授業への理解度や意思表示が先生側で全部見られるようになっている。そこで、生徒は<strong
+                      >4つのステータス (<span style="color: #0071da"
+                        >発言したいです。</span
+                      >/<span style="color: #095c00">当てられてもOK</span>/<span
+                        style="color: #ed4949"
+                        >分からないなー</span
+                      >/<span style="color: #b2b52a">眠い</span>)</strong
+                    >
+                    を選択しよう!
+                  </p>
+                  <p>
+                    また、<strong>先生が発言を募集</strong>したときは、もう1回リアクションを送信しよう!!!
+                  </p>
+                </div>
+                <div><img src="/1582_quizstudent.png" width="100%" /></div>
+                <div>
+                  <h3
+                    style="
+                      color: black;
+                      border: none;
+                      border-bottom: 4px dashed #0c0c0c;
+                    "
+                  >
+                    <u>④生徒は質問に回答しよう!!!</u>
+                  </h3>
+                  <p>
+                    　このアプリには、先生側が生徒みんなに質問を投げかけるためのフォーム機能があります。(先生側参照)先生がフォームを作成したときは、生徒は質問セクションの質問を選んで、回答しましょう。質問に回答すると、みんなの回答を見られるようになります。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content" id="programming_content">
+              <div class="grid3" style="margin-left: 10px; margin-right: 10px">
+                <div><img src="/1582_teacher.png" width="100%" /></div>
+                <div>
+                  <h3
+                    style="
+                      color: black;
+                      border: none;
+                      border-bottom: 4px dashed #0c0c0c;
+                    "
+                  >
+                    <u>③先生の操作方法!!!</u>
+                  </h3>
+                  <p>
+                    　まず、先生はこの画面に入り授業を開始したら、<strong>①授業を開始するボタン</strong>を押そう!これにより、全生徒のステータスが
+                    <strong>休み</strong
+                    >になる。このアプリは、生徒の授業への理解度や意思表示が先生側で全部見られるようになっている。授業が開始したら、生徒に<strong
+                      >4つのステータス (<span style="color: #0071da"
+                        >発言したいです。</span
+                      >/<span style="color: #095c00">当てられてもOK</span>/<span
+                        style="color: #ed4949"
+                        >分からないなー</span
+                      >/<span style="color: #b2b52a">眠い</span>)</strong
+                    >
+                    を選択するように指示しよう。すると、選択した生徒は休みでなくなり、結果的に<strong>授業に参加していない生徒をあぶりだす</strong>ことができる。授業が終わったら、<strong>②のボタン</strong>から授業を終了させよう。
+                  </p>
+                  <h4 style="margin: 0"><u>発言募集機能</u></h4>
+                  <p style="margin-top: 0">
+                    　生徒の発言を募集したいときは<strong>③のボタン</strong>を押して、生徒に投票するよう言う。
+                    ボタンを押すと生徒が未投票になり、生徒が投票すれば、<strong>生徒の反応を知ること</strong>ができる。また未投票の生徒は授業を聞いていない可能性がある。発言の募集が終わったら、<strong>④「発言の募集を終了するボタン」</strong>を押しておく。すると、<strong>後述のポイント機能のpt</strong>が反応に応じて加点される。<br />　また、複数人発言したい人がいる場合は、<strong>⑤「ランダム」ボタン</strong>を押すと、表示される順番が変わるので、<strong
+                      >発表する人を毎回スムーズに選べる。</strong
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="grid3" style="margin-left: 10px; margin-right: 10px">
+                <div><img src="/1582_point.png" width="100%" /></div>
+                <div>
+                  <h4 style="margin: 0"><u>ポイント機能</u></h4>
+                  <p style="margin-top: 0">
+                    このアプリは加えて、生徒の発言回数や反応に応じてポイントを加点するシステムを持っている。生徒が発言したときには、<strong>⑥の発言者の学籍番号</strong>をタップして、発言回数とポイントを追加できる。ぜひ、このポイントを<strong>生徒の授業態度の評価</strong>に使ってほしい。
+                  </p>
+                </div>
+              </div>
+              <div class="grid3" style="margin-left: 10px; margin-right: 10px">
+                <div class="grid3">
+                  <div>
+                    <img src="/1582_quiz.png" width="100%" />
+                  </div>
+                  <div><img src="/1582_answer.png" width="100%" /></div>
+                </div>
+                <div>
+                  <h4 style="margin: 0"><u>フォーム機能</u></h4>
+                  <p style="margin-top: 0">
+                    さらに、先生が質問を作成して、生徒に答えてもらうための、フォーム機能を装備している。<strong>⑦「カスタムで質問を作成」ボタン</strong>を押すと、質問を作成できる。質問形式は「自由回答」「ラジオボタン」「チェックボックス」の3種類。お好きな形式で作成できます。作成したあとは、<strong>⑧「作った質問を表示」ボタン</strong>から、生徒の質問への回答を閲覧することができます。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--このふわふわは残して-->
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              margin-left: 30px;
+              margin-right: 30px;
+            "
+          >
+            <div
+              class="l-wrapper_01"
+              style="
+                width: fit-content;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: rgb(243, 247, 250);
+                border: 3px solid rgb(196, 226, 250);
+              "
+            >
+              <div style="display: flex; justify-content: center">
+                <h2
+                  class="h2_text"
+                  style="
+                    width: fit-content;
+                    border: none;
+                    border-bottom: 4px dashed #0c0c0c;
+                  "
+                >
+                  このアプリを早速使ってみよう!!!
+                </h2>
+                <h3
+                  class="h3_text"
+                  style="
+                    width: fit-content;
+                    border: none;
+                    border-bottom: 4px dashed #0c0c0c;
+                  "
+                >
+                  このアプリを早速使ってみよう!
+                </h3>
+              </div>
+
+              <div style="display: flex; justify-content: center">
+                <a onclick="window.open('/1582')" class="button_01 -compact"
+                  >このアプリを楽しむ</a
+                >
+              </div>
+              <h3 style="text-align: center">↑↑↑ ここをクリック</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          style="
+            position: relative;
+            left: 0px;
+            height: 12vh;
+            width: 100%;
+            background-color: #8bc6ec;
+            background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+            border: none;
+            border-bottom: 4px dashed #ffff;
+            display: table;
+          "
+        >
+          <h2
+            style="
+              color: azure;
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              margin: 0 auto;
+            "
+          >
+            アプリのこだわり
+          </h2>
+        </div>
+        <div style="display: flex; justify-content: center">
+          <h3
+            style="
+              margin-left: 30px;
+              margin-right: 30px;
+
+              color: black;
+              border: none;
+              border-bottom: 4px dashed #0c0c0c;
+              text-align: center;
+            "
+          >
+            ポップなデザイン
+          </h3>
+        </div>
+
+        <div class="grid5" style="margin-left: 30px; margin-right: 30px">
+          <div style="display: flex; justify-content: center">
+            <img src="/teacher2.PNG" width="25%" />
+            <img src="/teacher3.PNG" width="25%" />
+            <img src="/teacher4.PNG" width="25%" />
+          </div>
+          <div>
+            <p>
+              　メイン画面の先生のイラストは線を太めに、<strong>可愛らしいイラスト</strong>にしました。また、全体的に<strong>ビビッドカラー</strong>を入れて、見やすいデザインを心がけました。
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="grid5"
+          style="margin-left: 30px; margin-right: 30px; margin-top: 20px"
+        >
+          <div>
+            <div style="display: flex; justify-content: center">
+              <h3
+                style="
+                  margin-left: 30px;
+                  margin-right: 30px;
+                  margin-top: 0px;
+                  color: black;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                  text-align: center;
+                "
+              >
+                洗練されたUI
+              </h3>
+            </div>
+            <div>
+              <p>
+                　ボタンをマウスオーバーすると、色が変わるなど、<strong>操作の分かりやすいUI</strong>にしました。また<strong>レスポンシブデザイン</strong>で、どの端末でも見やすさを重視しました。
+              </p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: center">
+              <h3
+                style="
+                  margin-left: 30px;
+                  margin-right: 30px;
+                  margin-top: 0px;
+                  color: black;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                  text-align: center;
+                "
+              >
+                アプリのシステム
+              </h3>
+            </div>
+            <div>
+              <p>
+                　このアプリは、もちろん生徒先生間でのコミュニケーションが捗るようにデザインされています。しかし、私は個人的に生徒のピ逃げも問題視しています。そこで、先生側はリロードをしなくてもすぐざま生徒の反応が反映されるのに対し、生徒側は<strong>あえてリロード</strong>しないと、フォームや投票が先生に認識されない、30分何も操作がなければ、欠席扱いになるなど、<strong>授業の活性化</strong>を目指したシステムにしました。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom: 30px">
+        <div
+          style="
+            position: relative;
+            left: 0px;
+            height: 12vh;
+            width: 100%;
+            background-color: #8bc6ec;
+            background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+            border: none;
+            border-bottom: 4px dashed #ffff;
+            display: table;
+          "
+        >
+          <h2
+            style="
+              color: azure;
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              margin: 0 auto;
+            "
+          >
+            開発技術
+          </h2>
+        </div>
+        <div class="grid4" style="margin-left: 10px; margin-right: 10px">
+          <div id="tech1">
+            <div style="display: flex; justify-content: center">
+              <h3
+                style="
+                  margin-left: 30px;
+                  margin-right: 30px;
+
+                  color: black;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                  text-align: center;
+                "
+              >
+                バックエンド
+              </h3>
+            </div>
+            <ul style="text-align: left; width: fit-content; margin: auto">
+              <li>pythonのフレームワークflask</li>
+              <li>sqlite</li>
+              <li>awsEC2(現在のデジタル部サーバーに移す前)</li>
+              <li>apache(現在のデジタル部サーバーに移す前)</li>
+            </ul>
+
+            <div style="display: flex; justify-content: center">
+              <h3
+                style="
+                  margin-left: 30px;
+                  margin-right: 30px;
+
+                  color: black;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                  text-align: center;
+                "
+              >
+                フロントサイド
+              </h3>
+            </div>
+            <ul style="text-align: left; width: fit-content; margin: auto">
+              <li>jquery</li>
+              <li>vue.js</li>
+              <li>bootstrap</li>
+            </ul>
+            <div id="reflection">
+              <div style="display: flex; justify-content: center">
+                <h3
+                  style="
+                    margin-left: 30px;
+                    margin-right: 30px;
+
+                    color: black;
+                    border: none;
+                    border-bottom: 4px dashed #0c0c0c;
+                    text-align: center;
+                  "
+                >
+                  開発の感想
+                </h3>
+              </div>
+              <p style="margin-left: 20px; margin-right: 20px">
+                　アプリの開発には、おおよそ3ヶ月要しました。木南の記念すべき1作目のwebアプリですが、なかなかいいものに仕上がったと自負してます。
+              </p>
+              <p style="margin-left: 20px; margin-right: 20px">
+                　もっと実用を考えて、今後は管理ページを実装したいところです。
+              </p>
+            </div>
+          </div>
+          <div id="tech2" class="grid5">
+            <div>
+              <div style="display: flex; justify-content: center">
+                <h3
+                  style="
+                    margin-left: 30px;
+                    margin-right: 30px;
+
+                    color: black;
+                    border: none;
+                    border-bottom: 4px dashed #0c0c0c;
+                    text-align: center;
+                  "
+                >
+                  バックエンド
+                </h3>
+              </div>
+              <ul style="text-align: left; width: fit-content; margin: auto">
+                <li>pythonのフレームワークflask</li>
+                <li>sqlite</li>
+                <li>awsEC2(現在のデジタル部サーバーに移す前)</li>
+                <li>apache(現在のデジタル部サーバーに移す前)</li>
+              </ul>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: center">
+                <h3
+                  style="
+                    margin-left: 30px;
+                    margin-right: 30px;
+
+                    color: black;
+                    border: none;
+                    border-bottom: 4px dashed #0c0c0c;
+                    text-align: center;
+                  "
+                >
+                  フロントサイド
+                </h3>
+              </div>
+              <ul style="text-align: left; width: fit-content; margin: auto">
+                <li>jquery</li>
+                <li>vue.js</li>
+                <li>bootstrap</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: center">
+              <h3
+                style="
+                  margin-left: 30px;
+                  margin-right: 30px;
+
+                  color: black;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                  text-align: center;
+                "
+              >
+                ページ構成
+              </h3>
+            </div>
+            <table class="nara-table" id="ttable">
+              <thead>
+                <tr>
+                  <th>パス</th>
+                  <th>メソッド</th>
+                  <th>対象</th>
+                  <th>説明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>"/login"</th>
+                  <td>[GET,POST]</td>
+                  <td>生徒,先生</td>
+                  <td>ログイン画面</td>
+                </tr>
+                <tr>
+                  <th>"/"</th>
+                  <td>[GET]</td>
+                  <td>生徒,先生</td>
+                  <td>授業選択画面</td>
+                </tr>
+                <tr>
+                  <th>"/setting"</th>
+                  <td>[GET,POST]</td>
+                  <td>生徒,先生</td>
+                  <td>pswd変更画面</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;"</th>
+                  <td>[GET]</td>
+                  <td>生徒,先生</td>
+                  <td>
+                    クラスの画面(&lt;class&gt;の中身はclass名により異なる)
+                  </td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/post1"</th>
+                  <td>[GET]</td>
+                  <td>生徒</td>
+                  <td>ステータス「発言したい」の登録</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/post2"</th>
+                  <td>[GET]</td>
+                  <td>生徒</td>
+                  <td>ステータス「当てられてもOK」の登録</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/post3"</th>
+                  <td>[GET]</td>
+                  <td>生徒</td>
+                  <td>ステータス「分からないなー」の登録</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/post4"</th>
+                  <td>[GET]</td>
+                  <td>生徒</td>
+                  <td>ステータス「眠い」の登録</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/startclass"</th>
+                  <td>[GET]</td>
+                  <td>先生</td>
+                  <td>授業を始めるリクエスト</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/finishclass"</th>
+                  <td>[GET]</td>
+                  <td>先生</td>
+                  <td>授業を終わるリクエスト</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/startvote"</th>
+                  <td>[GET]</td>
+                  <td>先生</td>
+                  <td>発言の募集を開始するリクエスト</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/finishvote"</th>
+                  <td>[GET]</td>
+                  <td>先生</td>
+                  <td>発言の募集を終了するリクエスト</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/random1"</th>
+                  <td>[GET]</td>
+                  <td>先生</td>
+                  <td>発言したい人の並び替え</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/random2"</th>
+                  <td>[GET]</td>
+                  <td>先生</td>
+                  <td>当てられてもOKの人の並び替え</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/correct"</th>
+                  <td>[GET(ajax)]</td>
+                  <td>先生</td>
+                  <td>ポーリングして、生徒のステータスに変更があったか確認</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/register"</th>
+                  <td>[POST(ajax)]</td>
+                  <td>先生</td>
+                  <td>生徒のptと発言回数の登録</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/formregister"</th>
+                  <td>[POST(ajax)]</td>
+                  <td>先生</td>
+                  <td>フォーム用質問作成</td>
+                </tr>
+                <tr>
+                  <th>"/class/&lt;class&gt;/&lt;form&gt;"</th>
+                  <td>[GET,POST]</td>
+                  <td>生徒,先生</td>
+                  <td>
+                    &lt;form&gt;のなかはform番号。作成したフォームの結果画面
+                  </td>
+                </tr>
+                <tr>
+                  <th>"/logout"</th>
+                  <td>[GET]</td>
+                  <td>生徒,先生</td>
+                  <td>ログアウト</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="reflection2">
+          <div style="display: flex; justify-content: center">
+            <h3
+              style="
+                margin-left: 30px;
+                margin-right: 30px;
+
+                color: black;
+                border: none;
+                border-bottom: 4px dashed #0c0c0c;
+                text-align: center;
+              "
+            >
+              開発の感想
+            </h3>
+          </div>
+          <p style="margin-left: 30px; margin-right: 30px">
+            　アプリの開発には、おおよそ3ヶ月要しました。木南の記念すべき1作目のwebアプリですが、なかなかいいものに仕上がったと自負してます。
+          </p>
+          <p style="margin-left: 30px; margin-right: 30px">
+            　もっと実用を考えて、今後は管理ページを実装したいところです。
+          </p>
+        </div>
+        <!--このふわふわは残して-->
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+          "
+        >
+          <div
+            class="l-wrapper_01"
+            style="
+              width: fit-content;
+              padding: 20px;
+              border-radius: 10px;
+              background-color: rgb(247, 243, 250);
+              border: 3px solid rgb(225, 196, 250);
+            "
+          >
+            <div style="display: flex; justify-content: center">
+              <h2
+                class="h2_text"
+                style="
+                  width: fit-content;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                "
+              >
+                このアプリを早速使ってみよう!!!
+              </h2>
+              <h3
+                class="h3_text"
+                style="
+                  width: fit-content;
+                  border: none;
+                  border-bottom: 4px dashed #0c0c0c;
+                "
+              >
+                このアプリを早速使ってみよう!
+              </h3>
+            </div>
+
+            <div style="display: flex; justify-content: center">
+              <a onclick="window.open('/1582')" class="button_02 -compact"
+                >このアプリを楽しむ</a
+              >
+            </div>
+            <h3 style="text-align: center">↑↑↑ ここをクリック</h3>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          style="
+            position: relative;
+            left: 0px;
+            height: 12vh;
+            width: 100%;
+            background-color: #8bc6ec;
+            background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+            border: none;
+            border-bottom: 4px dashed #ffff;
+            display: table;
+          "
+        >
+          <h2
+            style="
+              color: azure;
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              margin: 0 auto;
+            "
+          >
+            参考文献<!-- とくになければ削って下さい -->
+          </h2>
+        </div>
+        <div style="margin: 30px">
+          <ul style="padding-left: 20px">
+            <li>
+              <a href="https://www.socym.co.jp/book/1224" target="_blank"
+                >掌田津耶乃「Flaskで学ぶWebアプリケーションのしくみとつくり方」ソシム社</a
+              ><br />
+              初めての人にはめっちゃ分かりやすくておすすめ。flask/bootstrap/sqlite/vue.jsについてすべてこの1冊で基礎を学べる!!!
+            </li>
+            <li>
+              <a
+                href="https://qiita.com/higuchidaisuke/items/ba4a9500d8fe9690f2b8"
+                target="_blank"
+                >Qiita「AWSでWebアプリを公開する方法(Python+Flask)」</a
+              >
+              <br />2023年11月4日閲覧
+              この記事は、awsEC2で初めてwebアプリを公開するにはもってこいの記事。
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    ///ここから下は全てjqueryで書いてます。jqueryで書いてもらえると嬉しいけど、こだわりあれば、別ので大丈夫
+    ///レスポンシブデザイン用にloadされたときと、ウィンドウサイズが変更されたときに処理実行
+    $(window).on("load", function () {
+      ///消さないで
+      if ($(window).width() <= 450) {
+        ///iphoneの時の処理
+        $("#head_title").attr(
+          "style",
+          "color: azure; display: inline-block; vertical-align: middle; font-size:18px;"
+        ); ///消さないで
+        $("#tech2").hide(); ///消していい
+        $("#ttable").attr("style", "width:100%;"); ///消していい
+        $("#reflection").hide(); ///消していい
+        $(".h2_text").hide(); ///消さないで
+      } else if ($(window).width() <= 1025) {
+        ///ipadの時の処理
+        $(".h3_text").hide(); ///消さないで
+        $("#tech1").hide(); ///消していい
+      } else if ($(window).width() <= 1252) {
+        ///標準的なノートpc
+        $("#tech2").hide(); ///消していい
+        $("#reflection2").hide(); ///消していい
+        $(".h3_text").hide(); ///消さないで
+      } else {
+        ///それ以外
+        $("#tech2").hide(); ///消していい
+        $("#reflection2").hide(); ///消していい
+        $(".h3_text").hide(); ///消さないで
+      }
+    });
+    $(window).resize(function () {
+      ///消さないで
+      if ($(window).width() <= 450) {
+        ///iphoneの時の処理
+        $("#head_title").attr(
+          "style",
+          "color: azure; display: inline-block; vertical-align: middle; font-size:18px;"
+        ); ///消さないで
+        $("#ttable").attr("style", "width:100%;");
+        $("#tech2").hide();
+        $("#tech1").show();
+        $("#reflection").hide();
+        $("#reflection2").show();
+        $(".h2_text").hide(); ///消さないで
+        $(".h3_text").show(); ///消さないで
+      } else if ($(window).width() <= 1025) {
+        ///ipadの時の処理
+        $("#head_title").attr(
+          "style",
+          "color: azure; display: inline-block; vertical-align: middle;"
+        ); ///消さないで
+        $("#ttable").removeAttr("style");
+        $("#tech1").hide();
+        $("#tech2").show();
+        $("#reflection2").show();
+        $(".h3_text").hide(); ///消さないで
+        $(".h2_text").show(); ///消さないで
+      } else if ($(window).width() <= 1252) {
+        ///標準的なノートpc
+        $("#head_title").attr(
+          "style",
+          "color: azure; display: inline-block; vertical-align: middle;"
+        ); ///消さないで
+        $("#ttable").removeAttr("style");
+        $("#tech2").hide();
+        $("#tech1").show();
+        $("#reflection").show();
+        $("#reflection2").hide();
+        $(".h3_text").hide(); ///消さないで
+        $(".h2_text").show(); ///消さないで
+      } else {
+        ///それ以外
+        $("#head_title").attr(
+          "style",
+          "color: azure; display: inline-block; vertical-align: middle;"
+        ); ///消さないで
+        $("#ttable").removeAttr("style");
+        $("#tech2").hide();
+        $("#tech1").show();
+        $("#reflection").show();
+        $("#reflection2").hide();
+        $(".h3_text").hide(); ///消さないで
+        $(".h2_text").show(); ///消さないで
+      }
+    });
+  </script>
+</html>
